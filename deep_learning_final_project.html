@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unitree Go2</title>
+    <!-- Include the same stylesheet -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="images/tab_logo.jpg" type="image/x-icon">
+</head>
+
+<body class="is-preload">
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header" style="display: flex; align-items: center; padding: 10px; gap: 15px;">
+            <!-- Back Arrow -->
+            <a href="index.html" style="text-decoration: none; color: inherit; font-size: 24px;">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+
+            <!-- Image -->
+            <div style="flex-grow: 1; display: flex; justify-content: center; align-items: center;">
+                <img src="images/thumbs/unet.png" alt="Header Image"
+                    style="max-width: 90%; height: auto; border-radius: 8px;">
+            </div>
+        </header>
+
+
+        <!-- Menu -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <!-- Main Content -->
+<article id="main">
+    <header class="major">
+        <h2>Attention Guided Off-Road Semantic Segmentation</h2>
+    </header>
+    <section>
+        <h3>Problem Statement</h3>
+        <p>
+            Navigating in off-road environments presents a significant challenge for autonomous vehicles due to their unpredictable and noisy nature. 
+            Conventional methods often fall short in addressing the complexity of these environments, leading to suboptimal performance and safety concerns. 
+            Robust and lightweight methods are needed to accurately identify terrains, obstacles, and objects for safe and efficient navigation. 
+            This problem is particularly crucial for applications like search and rescue missions, precision agriculture, and autonomous driving.
+        </p>
+
+        <h3>Project Overview</h3>
+        <p>
+            This project focuses on tackling the challenges of off-road environment navigation through Attention Guided Off-Road Semantic Segmentation. 
+            The objective is to develop methods capable of accurately identifying and classifying various terrains, obstacles, and objects for improved 
+            autonomous vehicle navigation.
+        </p>
+
+        <h3>Models Explored</h3>
+        <ul>
+            <li><strong>U-Net:</strong> Baseline model.</li>
+            <li><strong>Attention U-Net:</strong> Model enhanced with a visual attention module.</li>
+            <li><strong>Segformer:</strong> Model chosen for its performance potential.</li>
+        </ul>
+        <h3>Key Findings</h3>
+        <ul>
+            <li>The hypothesis that adding a visual attention module enhances the performance of baseline models was validated.</li>
+            <li>Segformer demonstrated the highest Mean Intersection over Union (mIoU), outperforming both Attention U-Net and U-Net.</li>
+            <li>While Attention U-Net performed better than U-Net, the performance gap was smaller than anticipated, prompting further investigation.</li>
+        </ul>
+
+        <h3>Conclusion</h3>
+        <p>
+            In conclusion, this project explored attention-guided semantic segmentation models for off-road environments. 
+            The findings supported the effectiveness of incorporating visual attention, with Segformer emerging as the top performer. 
+            This research contributes to the development of robust and efficient methods for enhancing autonomous vehicle navigation in challenging environments.
+        </p>
+
+        <p style="text-align: center; margin-top: 20px;">
+            <a href="https://github.com/OSSome01/semseg" target="_blank" style="text-decoration: none; color: white; background-color: #007bff; padding: 10px 20px; border-radius: 5px; font-size: 16px; display: inline-block;">
+                View on GitHub
+            </a>
+        </p>
+    </section>
+</article>
+
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

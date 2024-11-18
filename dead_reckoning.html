@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dead Reckoning</title>
+    <!-- Include the same stylesheet -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="images/tab_logo.jpg" type="image/x-icon">
+</head>
+
+<body class="is-preload">
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header" style="display: flex; align-items: center; padding: 10px; gap: 15px;">
+            <!-- Back Arrow -->
+            <a href="index.html" style="text-decoration: none; color: inherit; font-size: 24px;">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+
+            <!-- Image -->
+            <div style="flex-grow: 1; display: flex; justify-content: center; align-items: center;">
+                <img src="images/thumbs/dead_reckoning_results.png" alt="Header Image"
+                    style="max-width: 90%; height: auto; border-radius: 8px;">
+            </div>
+        </header>
+
+
+        <!-- Menu -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+ <!-- Main Content -->
+<article id="main">
+    <header class="major">
+        <h2>Navigation with IMU and Magnetometer</h2>
+    </header>
+    <section>
+        <h3>Overview</h3>
+        <p>
+            This report explores navigation techniques using an IMU and magnetometer for tasks such as calibration,
+            yaw estimation, forward velocity estimation, and trajectory analysis. Calibration addressed hard and soft
+            iron distortions, while complementary filtering enhanced the reliability of yaw estimation. Integration
+            methods were utilized for velocity and position estimations, revealing challenges and limitations in
+            dead reckoning.
+        </p>
+
+        <h3>Key Sections</h3>
+
+        <h4>1. Magnetometer Calibration</h4>
+        <p>
+            Calibration was performed to correct hard and soft iron distortions. Hard iron errors arise from nearby
+            magnetic materials, while soft iron errors stem from ferromagnetic components in the car. Corrections
+            involved fitting an ellipse to raw magnetometer data and applying transformations (rotation and scaling)
+            to convert the ellipse into a circle.
+        </p>
+
+        <h4>2. Yaw Estimation</h4>
+        <p>
+            Yaw estimation was achieved using a complementary filter combining low-frequency magnetometer data
+            with high-frequency gyroscope data. This method proved more reliable than using either source
+            independently. The complementary filter’s output closely matched the IMU's Kalman-filtered yaw data.
+        </p>
+
+        <h4>3. Forward Velocity Estimation</h4>
+        <p>
+            Forward velocity was calculated from GPS data and integrated acceleration. Bias correction involved
+            identifying stationary periods and applying adjustments to acceleration data. Challenges included
+            handling noise, jerks, and gravitational effects on slopes.
+        </p>
+
+        <h4>4. Y Acceleration</h4>
+        <p>
+            Y acceleration was estimated by combining gyroscope angular velocity with corrected X velocity.
+            High-frequency noise in accelerometer readings was mitigated using a low-pass filter, resulting in a
+            more accurate estimate matching gyroscope data.
+        </p>
+
+        <h4>5. Trajectory Estimation</h4>
+        <p>
+            Trajectories were compared between GPS data and estimates derived from forward velocity integration.
+            Errors in velocity propagated into displacement, with the estimated trajectory drifting from the GPS
+            trajectory over time. Accuracy was reliable within 2 meters for approximately 10 seconds.
+        </p>
+        <h3>Conclusion</h3>
+        <p>
+            The report demonstrates the effectiveness and challenges of sensor fusion techniques in navigation.
+            While complementary filtering and bias correction improved estimates, inherent limitations of
+            accelerometer noise and integration errors highlight areas for further improvement. Observed performance
+            aligns with expected device specifications.
+        </p>
+        <p style="text-align: center; margin-top: 20px;">
+            <a href="https://github.com/ronakhb/dead-reckoning.git" target="_blank" style="text-decoration: none; color: white; background-color: #007bff; padding: 10px 20px; border-radius: 5px; font-size: 16px; display: inline-block;">
+                View Driver Files on GitLab
+            </a>
+        </p>
+    </section>
+</article>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

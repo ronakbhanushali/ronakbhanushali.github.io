@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unitree Go2</title>
+    <!-- Include the same stylesheet -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="images/tab_logo.jpg" type="image/x-icon">
+</head>
+
+<body class="is-preload">
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header" style="display: flex; align-items: center; padding: 10px; gap: 15px;">
+            <!-- Back Arrow -->
+            <a href="index.html" style="text-decoration: none; color: inherit; font-size: 24px;">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+
+            <!-- YouTube Video -->
+            <div style="flex-grow: 1; display: flex; justify-content: center; align-items: center;">
+                <iframe width="90%" height="50%" src="https://www.youtube.com/embed/ifkpjuEywrg"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen style="border-radius: 8px;">
+                </iframe>
+            </div>
+        </header>
+
+
+
+        <!-- Menu -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <!-- Main Content -->
+        <article id="main">
+            <header class="major">
+                <h2>Person Re-identification using Siamese Neural Networks</h2>
+            </header>
+            <section>
+                <h3>Overview</h3>
+                <p>
+                    This project explores various models and datasets for person re-identification and evaluates their performance. 
+                    Person re-identification (ReID) aims to identify individuals across different camera views, which is critical for 
+                    surveillance, security, and retail applications.
+                </p>
+        
+                <h3>Models Used</h3>
+                <ul>
+                    <li><strong>ResNet50 Baseline:</strong> Following the Bag of Tricks paper.</li>
+                    <li><strong>OSNet:</strong> Optimized network designed specifically for ReID tasks.</li>
+                    <li><strong>Custom MobileNetV3 Large Backbone:</strong> Lightweight yet effective model tailored for efficiency.</li>
+                </ul>
+        
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Training pipeline adapted from 
+                        <a href="https://github.com/shuxjweb/last" target="_blank">this repository</a> with modifications for Weights & Biases (WandB) integration.</li>
+                    <li>Additional scripts for streamlined training, fine-tuning, evaluation, and automation:</li>
+                    <ul>
+                        <li><code>train_model.py</code></li>
+                        <li><code>finetune.py</code></li>
+                        <li><code>autorunner.sh</code></li>
+                        <li><code>auto_evaluator.sh</code></li>
+                    </ul>
+                    <li>Custom distance metrics and plotting functions for insightful evaluations.</li>
+                </ul>
+        
+                <h3>Environment Setup</h3>
+                <p>
+                    To set up the environment, use the provided Conda configuration file <code>siamese_net.yml</code>. Run the following commands:
+                </p>
+                <pre style="background: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto;">
+        conda env create -f environment.yml
+        conda activate pytorch
+                </pre>
+        
+                <h3>Usage</h3>
+                <p>Follow the instructions below to train and test the person ReID models:</p>
+                <h4>Training</h4>
+                <pre style="background: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto;">
+        python train_model.py --batch_size 64 --lr 0.00035 --model_name siamese --max_epochs 50 --train 1 --logs_dir /home/ronak/data/logs --dataset market1501 --log_wandb 1 --run_name siamese_market --data_dir /home/ronak/data/
+                </pre>
+        
+                <h4>Testing</h4>
+                <pre style="background: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto;">
+        python3 train_model.py --model baseline --train 0 --dataset market1501 --logs_dir /home/ronak/datasets/market1501/logs/baseline --data_dir /home/ronak/datasets/
+                </pre>
+        
+                <h4>Arguments</h4>
+                <ul>
+                    <li><strong>logs_dir:</strong> Path to store checkpoints.</li>
+                    <li><strong>run_name:</strong> Identifier for the WandB run and saved plots.</li>
+                    <li><strong>model:</strong> Choose between <code>siamese</code>, <code>baseline</code> (ResNet50), and <code>osnet_x0_25</code>.</li>
+                    <li><strong>dataset:</strong> Supported options include <code>market1501</code>, <code>dukemtmc</code>, and <code>last</code>.</li>
+                    <li><strong>data_dir:</strong> Path to the selected dataset.</li>
+                </ul>
+        
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="https://wandb.ai/attention-boys/Mobilenet%20ReID%20LaST%20Script/workspace?nw=nwuserbhanushaliron" target="_blank">
+                        WandB Training Data</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1Rmmy_538NdgABKeSNGC1O6ek79kmJIFl?usp=drive_link" target="_blank">
+                        Pretrained Weights</a></li>
+                </ul>
+    
+        
+                <p style="text-align: center; margin-top: 20px;">
+                    <a href="https://github.com/ronakhb/siamese-reid" target="_blank" style="text-decoration: none; color: white; background-color: #007bff; padding: 10px 20px; border-radius: 5px; font-size: 16px; display: inline-block;">
+                        View on GitHub
+                    </a>
+                </p>
+            </section>
+        </article>
+
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unitree Go2</title>
+    <!-- Include the same stylesheet -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="images/tab_logo.jpg" type="image/x-icon">
+</head>
+
+<body class="is-preload">
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header" style="display: flex; align-items: center; padding: 10px; gap: 15px;">
+            <!-- Back Arrow -->
+            <a href="index.html" style="text-decoration: none; color: inherit; font-size: 24px;">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+
+            <!-- YouTube Video -->
+            <div style="flex-grow: 1; display: flex; justify-content: center; align-items: center;">
+                <iframe width="90%" height="50%" src="https://www.youtube.com/embed/U1M0vKm8IFc"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen style="border-radius: 8px;">
+                </iframe>
+            </div>
+        </header>
+
+
+        <!-- Menu -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <article id="main">
+            <header class="major">
+                <h2>Precise Air Sealing Robot for Inaccessible Spaces (PARIS)</h2>
+            </header>
+            <section>
+                <p>
+                    Unstructured environments such as attics, crawl spaces, and other confined areas present significant
+                    challenges for inspection due to restricted access, uneven terrain, and limited visibility.
+                    Identifying defects like cracks, insulation gaps, and structural irregularities in these areas is
+                    essential for maintaining energy efficiency, structural integrity, and overall safety. Traditional
+                    inspection methods, which rely heavily on manual labor, can be time-consuming, unsafe, and prone to
+                    human error, especially in such inaccessible spaces.
+                </p>
+                <p>
+                    To address this challenge, the <strong>Precise Air Sealing Robot for Inaccessible Spaces
+                        (PARIS)</strong> is being
+                    developed. PARIS is a quadruped robot designed to
+                    autonomously navigate and
+                    inspect unstructured and confined environments with precision and efficiency.
+                </p>
+                <h3>Project Goals</h3>
+                <ul>
+                    <li><strong>Navigation in Unstructured Environments:</strong> Develop a robust navigation stack
+                        using ROS 2 for
+                        quadruped robots to traverse uneven surfaces, tight spaces, and cluttered areas safely and
+                        efficiently.</li>
+                    <li><strong>Defect Detection and Mapping:</strong> Leverage a 3D LiDAR integrated with ROS 2 to
+                        perform real-time
+                        mapping and detect cracks, insulation defects, and other anomalies, providing precise
+                        localization of these
+                        issues.</li>
+                    <li><strong>Simulation Environment Development:</strong> Create a simulation platform using ROS 2 to
+                        test and refine
+                        the robot's navigation, mapping, and inspection capabilities in a virtual environment before
+                        real-world
+                        deployment.</li>
+                </ul>
+                <h3>Technology Stack</h3>
+                <p>
+                    The development of PARIS leverages cutting-edge hardware and software to ensure robust performance
+                    in challenging
+                    environments:
+                </p>
+                <ul>
+                    <li><strong>Hardware:</strong> Unitree Go2 quadruped robot, Jetson Orin, MID360 LiDAR, and Intel
+                        RealSense depth
+                        camera.</li>
+                    <li><strong>Software:</strong> ROS 2 Foxy for modularity and real-time capabilities, ROS Noetic for
+                        legacy
+                        integration, Gazebo for simulation, and IsaacSim for high-fidelity virtual testing and data
+                        generation.</li>
+                </ul>
+                <p>
+                    This technology stack provides seamless integration of navigation, perception, and control systems,
+                    ensuring precise
+                    operation in unstructured and confined environments.
+                </p>
+                <h3>Significance</h3>
+                <p>
+                    PARIS aims to revolutionize inspection processes in inaccessible spaces by minimizing human
+                    involvement in hazardous conditions, enhancing the accuracy of defect detection, and increasing the
+                    efficiency of maintenance workflows. The use of ROS 2 ensures cutting-edge functionality and paves
+                    the way for reliable autonomous operations in challenging environments.
+                </p>
+                <p style="text-align: center; margin-top: 20px;">
+                    <a href="https://github.com/RIVeR-Lab/PARIS_2.git" target="_blank" style="text-decoration: none; color: white; background-color: #007bff; padding: 10px 20px; border-radius: 5px; font-size: 16px; display: inline-block;">
+                        View on GitHub
+                    </a>
+                </p>
+            </section>
+        </article>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
