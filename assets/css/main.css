@@ -3312,3 +3312,69 @@ body {
 #main {
     padding-top: 80px; /* Offset content for the fixed navbar */
 }
+
+/* Skills Section Styling */
+#skills {
+    text-align: center;
+    margin-top: 2em;
+    padding: 1em 0;
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Exactly 4 columns per row */
+    gap: 1.5em; /* Space between items */
+    justify-items: center; /* Center items horizontally in their grid cells */
+    text-align: center; /* Center text under each skill */
+}
+#skills h2 {
+	font-size: xx-large
+}
+
+#skills .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em; /* Space between skill items */
+}
+
+#skills img {
+	width: 100px;
+    height: 100px;
+    object-fit: contain; /* Keeps aspect ratio */
+    margin-bottom: 0.5em;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+#skills img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+#skills p {
+    margin-top: 0.5em;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Certifications Section Styling */
+#certifications {
+    margin-top: 3em;
+    padding: 1em 0;
+}
+
+#certifications ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#certifications ul li {
+    margin-bottom: 1em;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+

@@ -6,8 +6,9 @@
 -->
 <html>
 	<head>
-		<title>Strata by HTML5 UP</title>
+		<title>Ronak's Portfolio</title>
 		<meta charset="utf-8" />
+		<link rel="icon" href="images/tab_logo.jpg" type="image/x-icon">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
@@ -45,7 +46,7 @@
 					<li><a href="#projects">Projects</a></li>
 					<li><a href="#experience">Experience</a></li>
 					<li><a href="#resume">Resume</a></li>
-					<li><a href="#about-me">About Me</a></li>
+					<li><a href="#Education">Education</a></li>
 					<li><a href="#photography">Photography</a></li>
 					<li><a href="#get-in-touch">Get in Touch</a></li>
 				</ul>
@@ -67,6 +68,124 @@
 						</ul>
 					</section>
 
+					Here’s how you can structure and style a new Skills section (with visual examples) and a Certifications section beneath it.
+
+					HTML
+					html
+					Copy code
+					<!-- Skills Section -->
+					<section id="skills">
+						<header>
+							<h2 style="text-align: left;">Skills</h2> <!-- Left-aligned header -->
+						</header>
+						<p style="text-align: left;">Technologies and tools I have mastered over the years</p><br>
+						<div class="skills-grid">
+							<div class="skill">
+								<img src="images/thumbs/python.png" alt="Python" />
+								<!-- <p>Python</p> -->
+							</div>
+							<div class="skill">
+								<img src="images/thumbs/c++.png" alt="C++" />
+								<!-- <p>C++</p> -->
+							</div>
+							
+							<div class="skill">
+								<img src="images/thumbs/ros2.png" alt="ROS2" />
+								<!-- <p>ROS</p> -->
+							</div>
+							<div class="skill">
+								<img src="images/thumbs/ROS.png" alt="ros" />
+								<!-- <p>ROS</p> -->
+							</div>
+							<div class="skill">
+								<img src="images/thumbs/gazebo.png" alt="Gazebo" />
+								<!-- <p>ROS</p> -->
+							</div>
+							<div class="skill">
+								<img src="images/thumbs/pytorch.png" alt="PyTorch" />
+								<!-- <p>PyTorch</p> -->
+							</div>
+							<div class="skill">
+								<img src="images/thumbs/tensorrt.png" alt="tensorrt" />
+								<!-- <p>ROS</p> -->
+							</div>
+							<div class="skill">
+								<img src="images/thumbs/rviz.png" alt="Rviz" />
+								<!-- <p>ROS</p> -->
+							</div>
+							<div class="skill">
+								<img src="images/thumbs/isaacsim.webp" alt="isaacsim" />
+								<!-- <p>ROS</p> -->
+							</div>
+							<div class="skill">
+								<img src="images/thumbs/jetson.png" alt="jetson" />
+								<!-- <p>ROS</p> -->
+							</div>
+							<div class="skill">
+								<img src="images/thumbs/moveit.png" alt="moveit" />
+								<!-- <p>ROS</p> -->
+							</div>
+							<div class="skill">
+								<img src="images/thumbs/git.png" alt="git" />
+								<!-- <p>ROS</p> -->
+							</div>
+							<div class="skill">
+								<img src="images/thumbs/Linux-logo.jpg" alt="linux" />
+								<p>Linux</p>
+							</div>
+							<div class="skill">
+								<img src="images/thumbs/opencv.png" alt="opencv" />
+								<!-- <p>ROS</p> -->
+							</div>
+							<div class="skill">
+								<img src="images/thumbs/numpy.png" alt="numpy" />
+								<!-- <p>ROS</p> -->
+							</div>
+							<div class="skill">
+								<img src="images/thumbs/pcl.png" alt="pcl" />
+								<!-- <p>ROS</p> -->
+							</div>
+
+							<div class="skill">
+								<img src="images/thumbs/eigen.jpeg" alt="eigen" />
+								<p>Eigen</p>
+							</div>
+							<div class="skill">
+								<img src="images/thumbs/solidworks.png" alt="solidworks" />
+								<!-- <p>ROS</p> -->
+							</div>
+							<div class="skill">
+								<img src="images/thumbs/MATLAB-logo.png" alt="matlab" />
+								<!-- <p>ROS</p> -->
+							</div>
+							<div class="skill">
+								<img src="images/thumbs/studio5000.jpeg" alt="studio5000" />
+								<!-- <p>ROS</p> -->
+							</div>
+							<div class="skill">
+								<img src="images/thumbs/jira.jpeg" alt="jira" />
+								<!-- <p>ROS</p> -->
+							</div>
+							
+							
+						</div>
+					</section>
+
+<!-- Projects Timeline Section -->
+<!-- <section id="timeline">
+    <header class="major">
+        <h2>Project Timeline</h2>
+    </header>
+    <div class="timeline">
+        <div class="timeline-event">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>2024: Navigation & Mapping on Unitree Go_2</h3>
+                <p>Developed navigation and mapping algorithms for Unitree Go_2, including a simulation environment in IsaacSim.</p>
+            </div>
+        </div>
+    </div>
+</section> -->
 				<!-- Two -->
 					<section id="projects">
 						<h2>Projects</h2>
@@ -81,7 +200,7 @@
 								<h3>3D Modeling</h3>
 								<p>Check out some robots and mechanisms that I designed and prototyped.</p>
 							</article>
-							<article class="col-6 col-12-xsmall work-item">
+							<!-- <article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
 								<h3>Tortor metus commodo</h3>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
@@ -101,17 +220,75 @@
 								<h3>Risus ornare lacinia</h3>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
-						</div>
-						<ul class="actions">
-							<li><a href="#" class="button">Full Portfolio</a></li>
-						</ul>
+						</div> -->
 					</section>
-<!-- About Me Section -->
-<section id="about-me">
+					<!-- Certifications Section -->
+					<section id="certifications">
+						<header>
+							<h2 style="text-align: left;">Certifications</h2> <!-- Left-aligned header -->
+						</header>
+						<ul>
+								<strong>SolidWorks Certifications:</strong>
+								<ul style="list-style-type: disc; margin-left: 20px;">
+									<li><a href= "assets/data/Certifications/cswp.pdf" target="_blank">Certified SolidWorks Professional (CSWP)</a></li>
+									<li><a href= "assets/data/Certifications/cswa.pdf" target="_blank">Certified SolidWorks Associate (CSWA)</a></li>
+									<li><a href= "assets/data/Certifications/sheet_metal.pdf" target="_blank">Certified SolidWorks Professional Advanced Sheet Metal</a></li>
+									<li><a href= "assets/data/Certifications/cswp_weldments.pdf" target="_blank">Certified SolidWorks Professional Advanced Weldments</a></li>
+									<li><a href= "assets/data/Certifications/cswa_additive.pdf" target="_blank">Certified SolidWorks Associate Additive Manufacturing </a></li>
+									<li><a href= "assets/data/Certifications/sustainable_design.pdf" target="_blank">Certified SolidWorks Associate Sustainable Design</a></li>
+								</ul>
+							</li>
+						</ul>
+						<ul>
+							<strong>AutoDesk Certifications:</strong>
+							<ul style="list-style-type: disc; margin-left: 20px;">
+								<li><a href= "assets/data/Certifications/Generative_design_course.pdf" target="_blank">Autodesk Generative Design for Manufacturing</a></li>
+							</ul>
+						</li>
+					</ul>
+					</section>
+<section id="Education">
 	<header class="major">
-		<h2>About Me</h2>
+		<h2>Education</h2>
 	</header>
-	<p>I am a Robotics Engineer with a passion for autonomous systems and robotics software. I am currently pursuing my MS in Robotics at Northeastern University, where I focus on mobile robots, perception, and motion planning.</p>
+	<div class="about-me-content">
+		<!-- Northeastern University -->
+		<div style="margin-bottom: 30px;">
+			<div style="display: flex; align-items: center; margin-bottom: 10px;">
+				<img src="images/thumbs/northeastern.png" alt="Northeastern University" style="width: 120px; margin-right: 15px;" />
+				<div>
+					<p style="margin: 0; font-weight: bold;">Master of Science in Robotics</p>
+					<p style="margin: 0;">Northeastern University, Boston, MA</p>
+					<p style="margin: 0;">September 2022 - Dec 2024</p>
+					<p style="margin-top: 10px;">GPA: <strong>3.95/4.0</strong></p>
+				</div>
+			</div>
+			<p><strong>Relevant Courses:</strong></p>
+			<ul style="margin: 0 0 10px 20px; padding: 0;">
+				<li>Mobile Robotics</li>
+				<li>Deep Learning</li>
+				<li>Robotic Sensing and Navigation</li>
+				<li>Robot Mechanics and Control</li>
+				<li>Reinforcement Learning</li>
+				<li>Pattern Recognition and Computer Vision</li>
+				<li>Control Systems</li>
+			</ul>
+		</div>
+
+		<hr style="border: 1px solid #ccc; margin: 40px 0;" />
+
+		<div>
+			<div style="display: flex; align-items: center; margin-bottom: 10px;">
+				<img src="images/thumbs/kjsce.webp" alt="KJSCE" style="width: 120px; margin-right: 15px;" />
+				<div>
+					<p style="margin: 0; font-weight: bold;">Bachelor of Technology in Mechanical Engineering</p>
+					<p style="margin: 0;">K. J. Somaiya College of Engineering, Mumbai, India</p>
+					<p style="margin: 0;">Aug 2017 - May 2021</p>
+					<p style="margin-top: 10px;">GPA: <strong>8.84/10.00</strong></p>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 
 <!-- Experience Section -->
@@ -119,7 +296,49 @@
 	<header class="major">
 		<h2>Experience</h2>
 	</header>
-	<p>Over the years, I have worked on various robotics projects, including mobile robots, autonomous navigation, and quadrupeds. I have gained valuable experience in ROS, SLAM, perception, and motion planning.</p>
+	<!-- Piaggio Fast Forward -->
+	<div class="experience-entry">
+		<div class="experience-logo">
+			<img src="images/thumbs/pff_logo.png" alt="Piaggio Fast Forward Logo" style="width: 200px; margin-right: 15px;"/>
+		</div>
+		<div class="experience-details">
+			<h3>Piaggio Fast Forward, Boston, MA</h3>
+			<p><strong>Role:</strong> Robotics Intern</p>
+			<p><strong>Dates:</strong> July 2023 - April 2024</p>
+			<p><strong>Responsibilities:</strong></p>
+			<ul>
+				<li>Implemented Iterative Closest Point (ICP) to enhance localization, resulting in a 35% improvement in the position estimate.</li>
+				<li>Developed a dataset creation tool in Python for leader identification using data collected from a person-following robot.</li>
+				<li>Trained a Siamese Neural Network for leader re-identification in a one-shot learning framework using PyTorch, achieving 90% accuracy, and efficiently deployed it on Jetson TX2 using the TensorRT C++ API for real-time inference.</li>
+				<li>Designed and implemented a data collection tool in C++ to capture LIDAR readings and ground truth data from a laser rangefinder, enabling the creation of a robust sensor model.</li>
+				<li>Engineered a LIDAR sensor model using linear regression on surface data, significantly improving accuracy for precision docking across varying surface types and optimizing real-world performance.</li>
+				<li>Developed precision docking feature for an autonomous mobile robot with onboard RP LIDAR and RealSense depth camera.</li>
+			</ul>
+		</div>
+	</div>
+
+	<hr>
+
+	<!-- IITD-AIA Foundation for Smart Manufacturing -->
+	<div class="experience-entry">
+		<div class="experience-logo">
+			<img src="images/thumbs/fsmlogo.png" alt="IITD-AIA Foundation for Smart Manufacturing Logo" style="width: 200px; margin-right: 15px;"/>
+		</div>
+		<div class="experience-details">
+			<h3>IITD-AIA Foundation for Smart Manufacturing, IIT Delhi, India</h3>
+			<p><strong>Role:</strong> Robotics Engineer</p>
+			<p><strong>Dates:</strong> August 2021 - July 2022</p>
+			<p><strong>Responsibilities:</strong></p>
+			<ul>
+				<li>Integrated an Autonomous Mobile Robot (AMR) with an onboard TM5M700 cobot for autonomous material handling in a Cyber-Physical factory using ROS.</li>
+				<li>Developed an optimized pick and place sequence for workpiece handling with cobot using the Moveit! ROS package.</li>
+				<li>Optimized workpiece detection by creating an object detection pipeline using transfer learning.</li>
+				<li>Deployed the workpiece detection pipeline on NVIDIA Jetson Xavier & merged it with the pick-and-place pipeline.</li>
+				<li>Defined waypoints for AMR to automate the AMR dispatch process for seamless operation using ROS and REST API.</li>
+			</ul>
+		</div>
+	</div>
+
 </section>
 
 <!-- Resume Section -->
